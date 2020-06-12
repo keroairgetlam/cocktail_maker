@@ -1,2 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-banner">
+
+<ul>
+<% @cocktails.each do |cocktail| %>
+    <li><%= cocktail.name %></li>
+    <% end %>
+</ul>
+
+<button type="button" class="btn btn-primary">Add a cocktail</button>
+
+</div>
