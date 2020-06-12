@@ -1,11 +1,14 @@
 <div class="home-banner">
+</div>
 
-<ul>
-<% @cocktails.each do |cocktail| %>
-    <li><%= cocktail.name %></li>
+<div class="border-top border-warning">
+  <div class="d-flex justify-content-between flex-wrap">
+  <% @cocktails.each do |cocktail| %>
+    <%= link_to cocktail_path(cocktail) do  %>
+     <div class="card m-2">
+       <%= image_tag("#{cocktail.photo}") %>
+     </div>
     <% end %>
-</ul>
-
-<button type="button" class="btn btn-primary">Add a cocktail</button>
-
+  <% end %>
+  </div>
 </div>

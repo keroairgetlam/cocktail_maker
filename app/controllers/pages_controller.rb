@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @cocktails = Cocktail.all
+    cocktail = Cocktail.first(10)
+    @cocktails = cocktail.sample(6)
   end
 end
