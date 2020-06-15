@@ -10,3 +10,12 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-banner {
+  background-image: asset-url('navbar_bgd.jpg');
+  background-size: cover;
+  text-align: center;
+  height: 60px;
+  width: 100vw;
+}
+

@@ -3,7 +3,8 @@
   </div>
 </div>
 
-<div class="border-top border-warning">
+<div class="border-top border-warning card-background">
+    <a href="cocktails" class="btn btn btn-dark mt-5 ml-5">See all cocktails</a>
   <div class="d-flex justify-content-between flex-wrap">
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do  %>
