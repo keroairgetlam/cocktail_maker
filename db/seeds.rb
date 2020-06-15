@@ -17,6 +17,8 @@
 #   cocktail = Ingredient.create!(name: item['strIngredient1'])
 # end
 require 'faker'
+Cocktail.destroy_all
+User.destroy_all
 
 3.times do
   user=User.new
