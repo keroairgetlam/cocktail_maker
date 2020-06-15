@@ -1,0 +1,11 @@
+<div class="border-top border-warning">
+  <div class="d-flex justify-content-between flex-wrap">
+    <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail) do  %>
+        <div class="card m-5">
+          <%= image_tag("#{cocktail.photo}") %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
