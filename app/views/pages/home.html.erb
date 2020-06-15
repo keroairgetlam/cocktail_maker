@@ -1,11 +1,13 @@
 <div class="home-banner">
+  <div class="button-create"><a href="new_cocktail_path" class="btn btn-warning btn-lg">+ Create your very own cocktail</a>
+  </div>
 </div>
 
 <div class="border-top border-warning">
   <div class="d-flex justify-content-between flex-wrap">
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do  %>
-        <div class="card m-5">
+        <div class="card m-5 rounded">
           <%= image_tag("#{cocktail.photo}") %>
         </div>
       <% end %>
