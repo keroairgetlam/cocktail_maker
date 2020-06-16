@@ -7,22 +7,24 @@ class CocktailsController < ApplicationController
   # GET /cocktails/1
   def show
     @cocktail = Cocktail.find(params[:id])
+    @dose = Dose.new
   end
 
   # GET /cocktails/new
   def new
     @cocktail = Cocktail.new
   end
-  #   # GET /cocktailss/1/edit
-  #   def edit
-  #   end
 
-  #   # POST /cocktails
+  # GET /cocktailss/1/edit
+  # def edit
+  # end
+
+  # POST /cocktails
   def create
     @cocktail = Cocktail.new(cocktail_params)
 
     if @cocktail.save
-      redirect_to @cocktail, notice: 'Cocktail was successfully created.'
+      redirect_to cocktail_path(@cocktail), notice: 'Cocktail was successfully created.'
     else
       render :new
     end
@@ -41,7 +43,7 @@ class CocktailsController < ApplicationController
 #   def destroy
 #     @cocktail.destroy
 #     redirect_to cocktails_url, notice: 'Cocktail was successfully destroyed.'
-  #   end
+#   end
 
   private
 

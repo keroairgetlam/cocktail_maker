@@ -4,7 +4,7 @@
   background-size: cover;
   text-align: center;
   height: 450px;
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 
@@ -12,4 +12,8 @@
   position: absolute;
   top: 15em;
   left: 8em;
+}
+
+body{
+  margin: 0;
 }

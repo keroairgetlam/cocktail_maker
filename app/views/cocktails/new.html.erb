@@ -1,11 +1,12 @@
-<h1>New cocktail</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1>Create a new cocktail</h1>
 
-<h2>Description</h2>
-
-<h2>Ingredient</h2>
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name, :label => 'Nom de votre cocktail' %>
-  <%= f.association :ingredients, :label => 'Ingredient' %>
-  <%= f.association :doses, :label => 'Dose' %>
-  <%= f.button :submit %>
-<% end %>
+      <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name, :label => 'Nom de votre cocktail' %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
