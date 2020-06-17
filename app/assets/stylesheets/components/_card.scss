@@ -1,3 +1,17 @@
 .card-background{
   background-color: #8AC5E0;
 }
+
+.card{
+  height: 350px;
+  width: 350px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.card-name{
+  margin-top: 20px;
+  font-size: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+}

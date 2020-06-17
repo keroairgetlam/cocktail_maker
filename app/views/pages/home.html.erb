@@ -8,10 +8,10 @@
   <div class="d-flex justify-content-between flex-wrap">
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do  %>
-        <div class="card m-5 rounded">
-          <%= image_tag("#{cocktail.photo}") %>
-        </div>
+        <div class="card m-5" style="background-image: url('<%= image_path(cocktail.photo, height: 350, width: 350, crop: :fill) %>')">
       <% end %>
+        <div class="card-name"><%= cocktail.name %></div>
+        </div>
     <% end %>
   </div>
 </div>
