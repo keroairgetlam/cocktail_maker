@@ -1,15 +1,18 @@
 <div class="border-top border-warning card-background">
   <a href="cocktails/new" class="btn btn btn-dark mt-5 ml-5">+ Create your own cocktail</a>
+
   <div class="d-flex justify-content-between flex-wrap ">
     <% @cocktails.each do |cocktail| %>
-    <% if cocktail.photo != nil %>
+      <% if cocktail.photo != nil %>
       <%= link_to cocktail_path(cocktail) do  %>
         <div class="card m-5" style="background-image: url('<%= image_path(cocktail.photo, height: 350, width: 350, crop: :fill) %>')">
+        <div class="card-name"><%= cocktail.name %></div>
+      <%= link_to image_tag("heart_symbol_on.png", class: "card-heart"), "#" %>
       <% end %>
         </div>
-        <% else %>
+      <% else %>
         <%= cocktail.name %>
-    <% end %>
+      <% end %>
     <% end %>
   </div>
 </div>
