@@ -1,0 +1,13 @@
+<div class="card-background">
+  <div class="container pt-5">
+    <h1>Mes cocktails</h1>
+  <div class="d-flex justify-content-between flex-wrap ">
+    <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail) do  %>
+        <%= cocktail.name %>
+      <% end %>
+        </div>
+    <% end %>
+  </div>
+  </div>
+</div>

@@ -2,11 +2,14 @@
   <a href="cocktails/new" class="btn btn btn-dark mt-5 ml-5">+ Create your own cocktail</a>
   <div class="d-flex justify-content-between flex-wrap ">
     <% @cocktails.each do |cocktail| %>
+    <% if cocktail.photo != nil %>
       <%= link_to cocktail_path(cocktail) do  %>
-        <div class="card m-5">
-          <%= image_tag("#{cocktail.photo}") %>
-        </div>
+        <div class="card m-5" style="background-image: url('<%= image_path(cocktail.photo, height: 350, width: 350, crop: :fill) %>')">
       <% end %>
+        </div>
+        <% else %>
+        <%= cocktail.name %>
+    <% end %>
     <% end %>
   </div>
 </div>

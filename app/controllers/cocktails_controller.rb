@@ -30,6 +30,10 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def dashboard
+    @cocktails = Cocktail.where(user_id: current_user)
+  end
+
 #   # PATCH/PUT /cocktails/1
 #   def update
 #     if @cocktail.update(cocktail_params)
